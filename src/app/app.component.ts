@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, TemplateRef, ViewChild, OnInit } from '@angular/core';
 import {
   NgFlowchartCanvasDirective,
   NgFlowchartStepRegistry,
@@ -146,6 +146,12 @@ export class AppComponent {
       ...this.options,
       isSequential: event.target.checked
     };
+  }
+
+  public onOrientationChange(event) {
+    this.canvas.setOrientation(
+      event.target.checked ? 'HORIZONTAL' : 'VERTICAL'
+    );
   }
 
   public onDelete(id: any) {

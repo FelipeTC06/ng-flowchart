@@ -14,10 +14,10 @@
       </div>
     </section>
 
-    <section>
+    <!--section>
       <button (click)="showFlowData()">Show JSON</button>
       <button (click)="showUpload()">Upload JSON</button>
-    </section>
+    </section-->
     <section>
       <div class="sub-section">
         <label for="step-gap-select" class="wide">Step Gap</label>
@@ -39,6 +39,13 @@
           name="sequential"
           (change)="onSequentialChange($event)"
         />
+      </div>
+      <div class="sub-section">
+        <label for="orientation">Horizontal Orientation</label>
+        <input
+          type="checkbox"
+          name="orientation"
+          (change)="onOrientationChange($event)" />
       </div>
       <div class="sub-section">
         <label for="disabled">Disabled</label>
